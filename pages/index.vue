@@ -59,7 +59,7 @@ import axios from 'axios'
 export default {
   async asyncData () {
     let { data } = await axios.get('http://localhost:3000/api/user')
-    console.log(data)
+    return {title: data}
   },
   components: {
     Logo,
