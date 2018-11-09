@@ -47,6 +47,7 @@
             nuxt
             to="/inspire">Continue</v-btn>
         </v-card-actions>
+        <div>{{ title }}</div>
       </v-card>
     </v-flex>
   </v-layout>
@@ -58,7 +59,8 @@ import VuetifyLogo from '~/components/VuetifyLogo.vue'
 import axios from 'axios'
 export default {
   async asyncData () {
-    let { data } = await axios.get('http://localhost:3000/api/user')
+    let { data } = await axios.get('http://localhost:3001/api/user')
+    console.log(data)
     return {title: data}
   },
   components: {
@@ -71,7 +73,7 @@ export default {
     }
   },
   async mounted () {
-    let { data } = await axios.get('http://localhost:3000/api/user')
+    let { data } = await axios.get('/api/user')
     console.log(data)
   }
 }
