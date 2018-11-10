@@ -1,7 +1,8 @@
-const express = require('express')
+// const express = require('express')
+import express from 'express'
 const router = express.Router()
-
 import * as user from '../controllers/user'
+
 
 /* GET home page. */
 router.get('/express', function (req, res, next) {
@@ -10,4 +11,4 @@ router.get('/express', function (req, res, next) {
 
 /* GET users listing. */
 router.get('/user', user.getUserInfo)
-module.exports = router
+export default router

@@ -1,7 +1,3 @@
-require('babel-core/register')({
-  'presets': [
-    'stage-3',
-    ['latest-node', { 'target': 'current' }]
-  ]
-})
-require('./server')
+require('babel-register')
+
+module.exports = require('./server/index')

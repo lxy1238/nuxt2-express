@@ -1,7 +1,6 @@
 
 
 
-
 export function getUserInfo (req, res, next) {
   res.send({
     code: 200,
@@ -10,3 +9,4 @@ export function getUserInfo (req, res, next) {
     }
   })
 }
+
