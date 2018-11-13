@@ -1,6 +1,7 @@
 <template>
   <div>
     首页
+    <mu-button color="primary">{{ title }}</mu-button>
   </div>
 </template>
 
